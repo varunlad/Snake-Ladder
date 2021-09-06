@@ -11,13 +11,17 @@ namespace Game
         static void Main(string[] args)
         {
             int player1 = 0;
+            Random random = new Random();
             while (player1 <= 100)
             {
-                Console.WriteLine(" position of player 1 is : " + player1);
-                player1++;
+                int x = random.Next(1, 6);
+                Console.WriteLine("  player 1 roll is : " + x);
+                player1 = player1 + x;
+                Console.WriteLine("The players position is : " + player1);
 
             }
             Console.ReadLine();
+            
         }
     }
 }
